@@ -1,0 +1,15 @@
+<center>
+  <h1>All Restaurants</h1>
+  <p><%= link_to "New Restaurant", new_restaurant_path %></p> 
+  <hr>
+  <% @restaurants.each do |restaurant| %>
+    <ul style="list-style-type: none;">
+      <li><%= restaurant.name  %></li>
+      <li><%= restaurant.address  %></li>
+      <li> <%= restaurant.category  %></li>
+      <li><%= restaurant.phone_number  %> </li>
+      <li><%= link_to "Editar", edit_restaurant_path(restaurant) %></li>
+    </ul>
+    <hr>
+  <% end %>
+</center>
